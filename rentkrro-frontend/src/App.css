@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #2563eb;    /* Trustworthy Blue */
+  --secondary-color: #10b981;  /* Eco/Growth Green */
+  --dark-color: #1e293b;       /* Dark Slate for text */
+  --light-color: #f8fafc;      /* Soft background off-white */
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
