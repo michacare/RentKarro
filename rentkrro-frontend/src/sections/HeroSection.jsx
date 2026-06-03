@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './HeroSection.css'; // We will create this styling next
+import './HeroSection.css'; 
+// Import your logo image file from the assets directory
+import logoImg from '../assets/logo.png'; // Make sure the filename matches yours (e.g., logo.svg or logo.png)
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
@@ -9,7 +11,6 @@ const HeroSection = () => {
     e.preventDefault();
     if (email.trim() === '') return;
 
-    // TODO: Connect to an API/Firebase in the next phase
     console.log(`Email registered for RentKrro: ${email}`);
     
     setIsSubmitted(true);
@@ -19,8 +20,13 @@ const HeroSection = () => {
   return (
     <section className="hero">
       <div className="hero-content">
+        {/* Swapped out the old h1 text with your brand logo image */}
         <div className="logo-brand">
-          <h1>Rent<span className="highlight">Krro</span>.com</h1>
+          <img 
+            src={logoImg} 
+            alt="RentKrro.com Logo" 
+            className="brand-logo" 
+          />
         </div>
         
         <h2 className="hero-title">Why Buy When You Can Rent?</h2>
@@ -30,7 +36,6 @@ const HeroSection = () => {
 
         <div className="badge">🚀 Launching Soon</div>
 
-        {/* Conditional rendering based on form submission state */}
         {!isSubmitted ? (
           <form className="newsletter-form" onSubmit={handleSubmit}>
             <input 

@@ -12,6 +12,21 @@
   width: 100%;
 }
 
+/* Style for the logo container */
+.logo-brand {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Control the size and scaling of your brand logo */
+.brand-logo {
+  max-width: 220px;     /* Limits the width so it looks elegant */
+  height: auto;         /* Maintains original proportions */
+  object-fit: contain;  /* Prevents image distortion */
+}
+
 .logo-brand h1 {
   font-size: 2.5rem;
   font-weight: 800;
